@@ -1,0 +1,66 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.game {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything */
+  gap: 20px; /* Space between title, board, and button */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0; /* No space between squares */
+  border: 5px solid #000080; /* Dark blue border */
+  border-radius: 10px; /* Rounded corners */
+  background: #000080; /* Dark blue background for grid lines */
+  padding: 5px; /* Space between outer border and squares */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: #add8e6; /* Light blue squares */
+  border: 3px solid #000080; /* Dark blue grid lines */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.status {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000080; /* Dark blue text */
+}
+
+.restart {
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #000080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.restart:hover {
+  background: #004080;
+}
