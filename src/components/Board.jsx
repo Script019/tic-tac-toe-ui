@@ -1,9 +1,11 @@
 import Square from "./Square";
 
-const Board = () => {
+const Board = ({ squares, onClick }) => {
   return (
     <div className="board">
-      {Array(9).fill(null).map((_, i) => <Square key={i} />)}
+      {squares.map((square, i) => (
+        <Square key={i} value={square} onClick={() => onClick(i)} />
+      ))}
     </div>
   );
 };

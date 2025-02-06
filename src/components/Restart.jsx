@@ -1,6 +1,9 @@
-const Restart = () => {
-    return <button className="restart">Restart Game</button>;
-  };
-  
-  export default Restart;
-  
+const Restart = ({ onClick }) => {
+  return (
+    <button className="restart" onClick={onClick}>
+      Restart Game
+    </button>
+  );
+};
+
+export default Restart;
